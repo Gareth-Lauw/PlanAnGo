@@ -46,18 +46,17 @@ class JavaFXAppTest {
         Boolean filled = false;
         int expectedNumber = 0;
         int actualNumber = 0;
-
-
+        
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Geef de deadline zijn naam");
-        String name = scanner.nextLine();
+        String name = "Something";
 
         System.out.println("Geef de eind datum:");
-        String deadlineDate = scanner.next();
+        String deadlineDate = "02/02/2020";
 
         System.out.println("Geef de begin datum:");
-        String startingDate = scanner.next();
+        String startingDate = "06/02/2020";
 
         Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(startingDate);
         Date date2=new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDate);
