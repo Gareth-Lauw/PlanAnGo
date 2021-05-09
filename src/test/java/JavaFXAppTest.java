@@ -49,6 +49,7 @@ class JavaFXAppTest {
         
         Scanner scanner = new Scanner(System.in);
 
+
         System.out.println("Geef de deadline zijn naam");
         String name = "Something";
 
@@ -71,6 +72,23 @@ class JavaFXAppTest {
 
         Assertions.assertEquals(expectedIngevuldeDeadline, filled);
         Assertions.assertEquals(expectedNumber, actualNumber);
+
+    }
+    
+    @Test
+    public boolean pairWiseTestOptions() {
+
+        String naam = "something";
+        String startingDate = "06/02/2020";
+        String deadlineDate = "02/02/2020";
+        String note = "Hello world";
+
+        if (naam != null && startingDate != null && deadlineDate != null && note != null) {
+            return true;
+        } else {
+            return false;
+        }
+
 
     }
 
