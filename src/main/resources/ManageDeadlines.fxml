@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPaneManageDeadlineMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageDeadlineController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="900.0" stroke="BLACK" strokeType="INSIDE" width="114.0" />
+      <Button fx:id="AddANewDeadlineButton" layoutX="150.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#AddANewDeadline" prefHeight="94.0" prefWidth="224.0" text="Add a new deadline" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="150.0" layoutY="173.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="224.0" text="Delete a deadlines" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="150.0" layoutY="304.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="224.0" text="Show finished deadlines" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="MainMenuButton" layoutX="7.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#backToMainMenuManageDeadlines" prefHeight="73.0" prefWidth="98.0" text="Back to Main Menu" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="7.0" layoutY="143.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="98.0" text="Main Menu" />
+      <Button layoutX="8.0" layoutY="242.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="98.0" text="Main Menu" />
+   </children>
+</AnchorPane>
