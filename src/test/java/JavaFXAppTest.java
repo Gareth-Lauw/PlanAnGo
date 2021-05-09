@@ -50,14 +50,15 @@ class JavaFXAppTest {
 
         Scanner scanner = new Scanner(System.in);
 
+
         System.out.println("Geef de deadline zijn naam");
-        String name = scanner.nextLine();
+        String name = "Something";
 
         System.out.println("Geef de eind datum:");
-        String deadlineDate = scanner.next();
+        String deadlineDate = "02/02/2020";
 
         System.out.println("Geef de begin datum:");
-        String startingDate = scanner.next();
+        String startingDate = "06/02/2020";
 
         Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(startingDate);
         Date date2=new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDate);
@@ -72,6 +73,23 @@ class JavaFXAppTest {
 
         Assertions.assertEquals(expectedIngevuldeDeadline, filled);
         Assertions.assertEquals(expectedNumber, actualNumber);
+
+    }
+    
+    @Test
+    public boolean pairWiseTestOptions() {
+
+        String naam = "something";
+        String startingDate = "06/02/2020";
+        String deadlineDate = "02/02/2020";
+        String note = "Hello world";
+
+        if (naam != null && startingDate != null && deadlineDate != null && note != null) {
+            return true;
+        } else {
+            return false;
+        }
+
 
     }
 
