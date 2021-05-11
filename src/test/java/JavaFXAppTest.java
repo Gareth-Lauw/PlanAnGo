@@ -60,8 +60,8 @@ class JavaFXAppTest {
         System.out.println("Geef de begin datum:");
         String startingDate = "06/02/2020";
 
-        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(startingDate);
-        Date date2=new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDate);
+        Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(startingDate);
+        Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDate);
 
         Deadline deadline = new Deadline( name, date2, date1);
 
@@ -75,7 +75,7 @@ class JavaFXAppTest {
         Assertions.assertEquals(expectedNumber, actualNumber);
 
     }
-    
+
     @Test
     public boolean pairWiseTestOptions() {
 
