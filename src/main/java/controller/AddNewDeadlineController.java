@@ -2,6 +2,7 @@ package controller;
 
 import java.io.Serializable;
 import com.sun.tools.javac.Main;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +27,8 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class AddNewDeadlineController implements Initializable {
+
+    public static Deadline newProject;
 
     @FXML
     private AnchorPane anchorPaneAddNewDeadline;
@@ -53,13 +56,13 @@ public class AddNewDeadlineController implements Initializable {
     }
 
 
-    public void NewDeadline() throws ParseException, IOException {
+    public Deadline NewDeadline() throws ParseException, IOException {
 
         String startingDateString =  ScannerStartingDate.getText();
-        Date startingDateDate = new SimpleDateFormat("dd/MM/yyyy").parse(startingDateString);
+        Date startingDateDate = new SimpleDateFormat("dd-MM-yyyy").parse(startingDateString);
 
         String deadlineDateString =  ScannerDeadline.getText();
-        Date deadlineDateDate= new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDateString);
+        Date deadlineDateDate= new SimpleDateFormat("dd-MM-yyyy").parse(deadlineDateString);
 
         String priorityLevelString =  ScannerPriorityLevel.getText();
         int priorityLevelInt = Integer.parseInt(priorityLevelString);
@@ -67,20 +70,19 @@ public class AddNewDeadlineController implements Initializable {
         String notes = ScannerNotes.getText();
 
 
-        Deadline deadline = new Deadline(ScannerName.getText(), deadlineDateDate, startingDateDate, priorityLevelInt, ScannerNotes.getText());
+        Deadline newProject = new Deadline(ScannerName.getText(), deadlineDateDate, startingDateDate, priorityLevelInt, notes);
+
+
+
+
+
 
 
 
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("MainMenuReal.fxml"));
         anchorPaneAddNewDeadline.getChildren().setAll(pane);
-
-
-
+        return newProject;
     }
-
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
