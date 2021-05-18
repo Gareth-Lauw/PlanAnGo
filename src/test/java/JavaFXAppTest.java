@@ -47,18 +47,24 @@ class JavaFXAppTest {
         int expectedNumber = 0;
         int actualNumber = 0;
 
+
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Geef de deadline zijn naam");
-        String name =  "deadlineTest";
+        String name = scanner.nextLine();
 
         System.out.println("Geef de eind datum:");
-        String deadlineDate =  "20/02/2020";
+        String deadlineDate = scanner.next();
 
         System.out.println("Geef de begin datum:");
-        String startingDate = "20/02/2020";
+        String startingDate = scanner.next();
 
         Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(startingDate);
         Date date2=new SimpleDateFormat("dd/MM/yyyy").parse(deadlineDate);
 
+        Deadline deadline = new Deadline( name, date2, date1);
+
+        allDeadlines.add(deadline);
 
         if (allDeadlines.size() -1 != allDeadlines.size()){
             filled = true;
